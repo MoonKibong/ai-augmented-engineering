@@ -65,7 +65,7 @@ This is the main documentation hub with a chronological reading order. Follow th
 
 ### Option 2: Interactive Slides (Quick Start) 🎬
 
-**Coming soon**: `index.html`
+**[View Interactive Slides](https://htmlpreview.github.io/?https://github.com/MoonKibong/ai-augmented-engineering/blob/main/index.html)** → `index.html`
 
 An interactive slide presentation that covers the essentials in a visual, engaging format. Perfect for:
 - Team training sessions
@@ -82,7 +82,7 @@ An interactive slide presentation that covers the essentials in a visual, engagi
 ```
 agentic-coding/
 ├── README.md                          # You are here! 👈
-├── index.html                         # Interactive slides (coming soon)
+├── index.html                         # Interactive slides (view online)
 │
 ├── docs/                              # Complete documentation
 │   ├── README.md                      # Main navigation hub ⭐ START HERE
