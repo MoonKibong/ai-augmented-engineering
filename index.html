@@ -164,6 +164,13 @@ code {
     box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.2);
 }
 
+pre.code-block code {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 15px;
+    line-height: 1.6;
+    display: block;
+}
+
 .token.keyword { color: #c084fc; }
 .token.string { color: #4ade80; }
 .token.function { color: #60a5fa; }
@@ -837,8 +844,7 @@ code {
     <h2 class="slide-title">루트 컨텍스트 파일 (The Root Context File)</h2>
     <div class="content-area">
         <p>프로젝트에서 가장 중요한 단 하나의 파일입니다.</p>
-        <div class="code-block" style="margin-top: 20px;">
-# Project: SaaS Platform
+        <pre class="code-block" style="margin-top: 20px;"><code># Project: SaaS Platform
 
 ## Tech Stack
 - <span class="token keyword">Frontend</span>: React 18, TypeScript, Tailwind
@@ -849,7 +855,7 @@ code {
 1. <span class="token comment">NO `any` types allowed. (any 타입 사용 금지)</span>
 2. <span class="token comment">Use functional components only. (함수형 컴포넌트만 사용)</span>
 3. <span class="token comment">All API calls must use `apiClient`. (모든 호출은 래퍼 사용)</span>
-        </div>
+        </code></pre>
     </div>
 </div>
 
@@ -896,15 +902,14 @@ code {
                 <p>보일러플레이트를 직접 짜지 마세요. 아키텍트처럼 행동하세요.</p>
                 <p>에이전트에게 아키텍처 선호도를 참조하여 뼈대를 잡도록 시키세요.</p>
             </div>
-            <div class="code-block">
-<span class="token comment">// 스캐폴딩 프롬프트 예시</span>
+            <pre class="code-block"><code><span class="token comment">// 스캐폴딩 프롬프트 예시</span>
 
 "Create a new React project. 
 Structure the folders by Feature 
 (Feature-Sliced Design). 
 Initialize a `docs/` directory.
 Setup `tsconfig` with strict mode."
-            </div>
+            </code></pre>
         </div>
     </div>
 </div>
@@ -1006,14 +1011,13 @@ Setup `tsconfig` with strict mode."
 <div class="slide-container" id="slide19">
     <h2 class="slide-title">분석 단계 (The Analysis Phase)</h2>
     <div class="content-area">
-        <div class="code-block">
-<span class="token comment">// 분석 프롬프트 (Analysis Prompt)</span>
+        <pre class="code-block"><code><span class="token comment">// 분석 프롬프트 (Analysis Prompt)</span>
 
 "Analyze the `src/utils` directory. 
 Identify the dominant error handling pattern used. 
 Summarize this pattern in a new file `docs/patterns/LEGACY_ERRORS.md`.
 Do not write any code yet."
-        </div>
+        </code></pre>
         <p style="margin-top: 30px; text-align: center;"><strong>컨텍스트 리버스 엔지니어링:</strong> 암묵적인 레거시 지식을 명시적인 문서로 변환하세요.</p>
     </div>
 </div>
@@ -1093,8 +1097,7 @@ Do not write any code yet."
 <div class="slide-container" id="slide24">
     <h2 class="slide-title">"정석 예시" (Canonical Example)</h2>
     <div class="content-area">
-        <div class="code-block">
-# Pattern: Data Fetching
+        <pre class="code-block"><code># Pattern: Data Fetching
 
 ## Canonical Example
 <span class="token keyword">export function</span> <span class="token function">useUser</span>(id: string) {
@@ -1108,7 +1111,7 @@ Do not write any code yet."
 ## Anti-Patterns
 - <span class="token comment">DO NOT use `useEffect` for data fetching.</span>
 - <span class="token comment">(useEffect를 데이터 페칭에 사용하지 말 것)</span>
-        </div>
+        </code></pre>
         <p style="margin-top:20px; font-size:16px; color:#94a3b8;">이것은 모델에게 구체적인 예시를 제공하여 모방하게 하는 "Few-Shot Prompting" 기법입니다.</p>
     </div>
 </div>
@@ -1307,8 +1310,7 @@ Do not write any code yet."
                 <p>복잡한 작업의 경우, AI가 바로 코딩하게 두지 마세요.</p>
                 <p>먼저 계획을 세우게 하세요. 이는 "추론 토큰(Reasoning Tokens)"을 생성하여 최종 코드의 품질을 높입니다.</p>
             </div>
-            <div class="code-block">
-<span class="token comment">// CoT 프롬프트 예시</span>
+            <pre class="code-block"><code><span class="token comment">// CoT 프롬프트 예시</span>
 
 "Plan the database migration.
 1. List potential risks.
@@ -1316,7 +1318,7 @@ Do not write any code yet."
 3. Write the migration script.
 
 <span class="token keyword">Do not write code until the plan is approved.</span>"
-            </div>
+            </code></pre>
         </div>
     </div>
 </div>
@@ -1404,8 +1406,7 @@ Do not write any code yet."
     <div class="advanced-badge">심화 과정 (Optional)</div>
     <h2 class="slide-title">해결책: PROJECT_SNAPSHOT.md</h2>
     <div class="content-area">
-        <div class="code-block">
-# PROJECT_SNAPSHOT.md (상태 캐시 파일)
+        <pre class="code-block"><code># PROJECT_SNAPSHOT.md (상태 캐시 파일)
 
 ## High Level (개요)
 - **Status**: Sprint 4 Active
@@ -1417,7 +1418,7 @@ Do not write any code yet."
 
 ## Architecture Decisions (아키텍처 결정)
 - 세션 관리에 `lucia-auth` 라이브러리 사용.
-        </div>
+        </code></pre>
         <p style="margin-top:20px; text-align:center; color:#94a3b8;">
             에이전트는 전체 저장소를 스캔하는 대신 <strong>이 단일 파일</strong>만 읽어 상황을 파악합니다.
         </p>
