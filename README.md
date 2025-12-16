@@ -106,12 +106,6 @@ agentic-coding/
 │       ├── documentation-patterns.md  # How to structure docs
 │       ├── collaboration-workflows.md # Team collaboration
 │       └── troubleshooting.md         # Common issues & solutions
-│
-└── docs-for-upload/                   # Flattened versions for Gemini/LLM upload
-    ├── 00-main-index.md
-    ├── 01-getting-started.md
-    ├── 02-context-documents-guide.md
-    └── ... (all docs with unique names)
 ```
 
 ---

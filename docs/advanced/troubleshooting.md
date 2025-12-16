@@ -284,6 +284,9 @@
 - Links to details
 - Quick reference sections
 
+**Token Optimization**:
+For advanced techniques on optimizing token usage and context window management, see [Claude Code Starter - Token Optimization](https://deepwiki.com/alexeykrol/claude-code-starter).
+
 ### Prompt Optimization
 
 **Be specific**:

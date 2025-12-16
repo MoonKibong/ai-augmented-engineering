@@ -76,6 +76,9 @@ CLAUDE.md (400 lines)
 - AI agents can quickly scan main file
 - Detailed docs provide comprehensive examples
 - Easier to maintain and update
+- Optimizes token usage and context window efficiency
+
+**Token Optimization**: For advanced techniques on optimizing token usage and context window management, see [Claude Code Starter - Token Optimization](https://deepwiki.com/alexeykrol/claude-code-starter).
 
 **Example from Starshare**:
 ```markdown
